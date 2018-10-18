@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="promo"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Promo Pages</title>
+    </head>
+    <body>
+        <referenceBlock name="promo">
+            <action method="setAvailablePromoUrl">
+                <argument name="url" xsi:type="url" path="promo/available"/>
+            </action>
+        </referenceBlock>
+    </body>
+</page>
