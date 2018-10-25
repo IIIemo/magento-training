@@ -1,0 +1,7 @@
+{
+    "name": "oggetto/m2-gulp",
+    "description": "Set of front-end tools for Magento 2, based on Gulp.js",
+    "version": "0.0.1",
+    "license": "MIT",
+    "type": "magento2-component"
+}

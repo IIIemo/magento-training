@@ -1,0 +1,18 @@
+{
+  "training": {
+    "src": "app/design/frontend/Oggetto/Training",
+    "dest": "pub/static/frontend/Oggetto/Training",
+    "locale": [
+      "en_US"
+    ],
+    "lang": "less",
+    "area": "frontend",
+    "vendor": "Oggetto",
+    "name": "Training",
+    "default": true,
+    "files": [
+      "css/styles-m",
+      "css/styles-l"
+    ]
+  }
+}

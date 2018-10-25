@@ -1,0 +1,41 @@
+env:
+  amd: true
+globals:
+  WOW: true
+  window: true
+  ymaps: true
+  google: true
+  SERVICE_URL: true
+  importScripts: true
+  grecaptcha: true
+  dataLayer: true
+plugins:
+  - prettier
+rules:
+  prettier/prettier:
+    - error
+    - printWidth: 120
+      useTabs: false
+      singleQuote: true
+      tabWidth: 4
+      trailingComma: none
+      semi: false
+  indent: 
+    - error
+    - 4
+  eol-last:
+    - error
+    - always
+  linebreak-style: 
+    - error
+    - unix
+  quotes: 
+    - error
+    - single
+  semi:
+    - error 
+    - never
+extends: 
+  - eslint:recommended
+  - prettier
+                    
