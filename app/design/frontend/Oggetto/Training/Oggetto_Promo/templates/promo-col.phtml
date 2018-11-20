@@ -1,0 +1,14 @@
+<?php
+/** @var Oggetto\Promo\ViewModel\Cart\Item\Promo $viewModel */
+/** @var Oggetto\Promo\ViewModel\Promo\PromoList $promoList */
+$viewModel = $block->getViewModel();
+$promoList = $block->getPromoList();
+$item = $block->getParentBlock()->getItem();
+?>
+
+<td class="col promo">
+    <?php $promoId = $viewModel->getPromoId($item->getProduct()) ?>
+    <a href="<?= $block->getUrl($block->getPromoRoute(), ['_fragment' => 'promo' . $promoId])?>">
+        <?= $promoList->getPromotions()[$promoId] ?>
+    </a>
+</td>

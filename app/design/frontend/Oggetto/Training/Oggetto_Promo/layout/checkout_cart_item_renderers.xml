@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.cart.item.renderers.simple">
+            <block name="promo-col" template="Oggetto_Promo::promo-col.phtml">
+                <arguments>
+                    <argument xsi:type="object" name="view_model">Oggetto\Promo\ViewModel\Cart\Item\Promo</argument>
+                    <argument xsi:type="object" name="promo_list">Oggetto\Promo\ViewModel\Promo\PromoList</argument>
+                    <argument xsi:type="string" name="promo_route">promo/available</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="checkout.cart.item.renderers.default" remove="true"/>
+    </body>
+</page>
