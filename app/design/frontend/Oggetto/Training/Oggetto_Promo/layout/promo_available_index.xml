@@ -7,7 +7,16 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <block name="promo-list" template="Oggetto_Promo::promo-list.phtml"/>
+            <block name="promo-list" template="Oggetto_Promo::promo-list.phtml">
+                <arguments>
+                    <argument xsi:type="object" name="view_model">Oggetto\Promo\ViewModel\Promo\PromoList</argument>
+                </arguments>
+                <block class="Magento\Cms\Block\Block" name="promo-cms-block" ifconfig="promotions/general/enabled">
+                    <arguments>
+                        <argument name="block_id" xsi:type="helper" helper="Oggetto\Promo\Helper\Data::getPromoBlockId"/>
+                    </arguments>
+                </block>
+            </block>
         </referenceContainer>
     </body>
 </page>
