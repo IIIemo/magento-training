@@ -32,7 +32,7 @@ node_modules
 /.php_cs
 /.php_cs.cache
 /grunt-config.json
-/dev/tools/grunt/configs/local-themes.js
+/dev/tools/grunt/configs/local-local-themes.js
 
 /pub/media/*.*
 !/pub/media/.htaccess

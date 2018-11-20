@@ -19,6 +19,18 @@
  *
  */
 module.exports = {
+    training: {
+        area: 'frontend',
+        name: 'Oggetto/Training',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l',
+            'css/email',
+            'css/email-inline'
+        ],
+        dsl: 'less'
+    },
     blank: {
         area: 'frontend',
         name: 'Magento/blank',
