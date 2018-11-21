@@ -9,3 +9,8 @@ $viewModel = $block->getViewModel();
     <?php endforeach;?>
 </ul>
 <?= $block->getChildHtml('promo-cms-block') ?>
+<script>
+    require(['testModule'], function(testModule) {
+        testModule.log('something');
+    })
+</script>
