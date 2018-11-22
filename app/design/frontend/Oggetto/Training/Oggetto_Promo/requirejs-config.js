@@ -11,6 +11,12 @@ var config = {
     },
     config: {
         mixins: {
+            'Magento_Catalog/js/price-box': {
+                'Oggetto_Promo/js/price-box-mixin': true
+            },
+            'Magento_Swatches/js/swatch-renderer': {
+                'Oggetto_Promo/js/swatch-renderer-mixin': true
+            },
             'Magento_Catalog/js/catalog-add-to-cart': {
                 'Oggetto_Promo/js/catalog-add-to-cart-mixin': true
             },
