@@ -1,0 +1,10 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var Oggetto\Promo\ViewModel\Promo\PromoList $viewModel */
+$viewModel = $block->getViewModel();
+?>
+<div id="promoList" class="promotions" data-mage-init='{
+    "promoList": {
+        "promos": <?= $viewModel->getPromotionsJson() ?>
+    }
+}'></div>

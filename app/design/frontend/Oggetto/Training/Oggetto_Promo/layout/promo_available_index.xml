@@ -17,6 +17,7 @@
                     </arguments>
                 </block>
             </block>
+            <block name="promo-map" template="Oggetto_Promo::promo-map.phtml"/>
         </referenceContainer>
     </body>
 </page>

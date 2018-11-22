@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block name="category-promo-list" template="Oggetto_Promo::promo-list-block.phtml" before="-">
+                <arguments>
+                    <argument xsi:type="object" name="view_model">Oggetto\Promo\ViewModel\Promo\PromoList</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
