@@ -1,0 +1,22 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$info = $block->getInfo();
+if(!$info) {
+    $info = $block->getVar("useless_info_fallback", "Magento_Catalog");
+}
+
+$tag = $block->getTag();
+
+if($tag) {
+    $info = "<{$tag}>{$info}</{$tag}>";
+}
+?>
+
+<div class="useless-info">
+    <?= $block->escapeHtml($info) ?>
+</div>
+<?php
+$childHtml = $block->getChildHtml($block->getNameInLayout() . '-useless-child');
+if($childHtml) :?>
+    <div style="padding-left: 50px;"><?= $childHtml ?></div>
+<?php endif?>

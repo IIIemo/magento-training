@@ -2,7 +2,36 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="product.info.main">
-            <block name="product.swag" template="Magento_Catalog::product/view/swag.phtml"/>
+            <block name="block1" template="Magento_Catalog::product/useless/info.phtml">
+                <arguments>
+                    <argument name="info" xsi:type="string">String</argument>
+                </arguments>
+            </block>
+            <block name="block2">
+                <arguments>
+                    <argument name="template" xsi:type="string">Magento_Catalog::product/useless/info.phtml</argument>
+                    <argument name="tag" xsi:type="string">div</argument>
+                </arguments>
+            </block>
+            <block name="block3">
+                <action method="setTemplate">
+                    <argument name="template" xsi:type="string">Magento_Catalog::product/useless/info.phtml</argument>
+                </action>
+                <arguments>
+                    <argument name="info" xsi:type="string">This block has a child</argument>
+                </arguments>
+                <block name="block3-useless-child" template="Magento_Catalog::product/useless/info.phtml">
+                    <arguments>
+                        <argument name="info" xsi:type="string">This block is inside another block and has padding</argument>
+                    </arguments>
+                    <block name="block3-useless-child-useless-child" template="Magento_Catalog::product/useless/info.phtml">
+                        <arguments>
+                            <argument name="info" xsi:type="string">This block is inside another block and has even more padding</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+            <block name="product.swag" template="Magento_Catalog::product/useless/swag.phtml"/>
         </referenceContainer>
         <move element="product.price.final" destination="page.main.title"/>
     </body>

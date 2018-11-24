@@ -8,4 +8,7 @@
             </image>
         </images>
     </media>
+    <vars module="Magento_Catalog">
+        <var name="useless_info_fallback">This info was taken from view.xml because the argument was not specified</var>
+    </vars>
 </view>
