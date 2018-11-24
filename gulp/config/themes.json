@@ -1,0 +1,18 @@
+{
+  "unshame": {
+    "src": "app/design/frontend/Oggetto/UnShame",
+    "dest": "pub/static/frontend/Oggetto/UnShame",
+    "locale": [
+      "en_US"
+    ],
+    "lang": "less",
+    "area": "frontend",
+    "vendor": "Oggetto",
+    "name": "UnShame",
+    "default": true,
+    "files": [
+      "css/styles-m",
+      "css/styles-l"
+    ]
+  }
+}

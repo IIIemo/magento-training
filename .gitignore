@@ -68,4 +68,4 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 
-gulp/
+gulp/node_modules/
