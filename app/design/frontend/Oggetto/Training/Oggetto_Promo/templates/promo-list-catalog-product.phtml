@@ -1,0 +1,37 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+/**
+ * @var Oggetto\Promo\ViewModel\Promo\PromoList $viewModel
+*/
+
+$viewModel = $block->getViewModel();
+?>
+
+<div data-bind="scope: 'pdpPromoList'">
+    <!-- ko foreach: {data: promotions, as: 'promo'} -->
+        <a href="" data-bind="text: promo.label, click: $parent.showDetails.bind($parent)"></a><br>
+    <!-- /ko -->
+    <!-- ko if: selectedPromo -->
+        <!-- ko with: selectedPromo -->
+            <h4 data-bind="text: label"></h4>
+            <div data-bind="text: description"></div>
+        <!-- /ko -->
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "pdpPromoList": {
+                        "component": "Oggetto_Promo/js/promo-list-component",
+                        "promotions": <?= $viewModel->getDetailedPromotionJson() ?>
+                    }
+                }
+            }
+        }
+    }
+</script>

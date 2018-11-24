@@ -8,5 +8,13 @@
         <move element="product.info.extrahint" destination="product.info.main" after="product.info.price"/>
 
         <referenceContainer name="product.info.social" remove="true"/>
+
+        <referenceContainer name="product.info.main">
+            <block name="pdp-promo-list" template="Oggetto_Promo::promo-list-catalog-product.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">\Oggetto\Promo\ViewModel\Promo\PromoList</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
     </body>
 </page>
