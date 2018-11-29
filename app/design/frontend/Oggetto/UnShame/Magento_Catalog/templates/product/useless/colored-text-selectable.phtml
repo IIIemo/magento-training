@@ -1,0 +1,36 @@
+<style>
+    .colorized-divs, #colorizedDiv, .colorized-divs-jq {
+        border: 1px solid black;
+    }
+</style>
+
+<div data-bind="scope: 'pointleslyColorizedDivs'">
+    <!-- ko foreach: {data: divs, as: 'div'} -->
+        <a href="" data-bind="text: 'This should be ' + div.color, click: $parent.colorize.bind($parent), style: {color: div.color}"></a><br>
+    <!-- /ko -->
+    <!-- ko if: selectedDiv -->
+        <h4 data-bind="text: 'Selected div is ' + selectedDiv.color"></h4>
+    <!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "pointleslyColorizedDivs": {
+                        "component": "js/pointless-color-thing",
+                        "divs": [
+                            {"color": "red"},
+                            {"color": "green"},
+                            {"color": "blue"},
+                            {"color": "purple"},
+                            {"color": "black"},
+                            {"color": "red"}
+                        ]
+                    }
+                }
+            }
+        }
+    }
+</script>
