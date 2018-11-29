@@ -1,8 +1,16 @@
-define(function () {
+define(['jquery', 'jquery/ui'],
+function($) {
     'use strict';
 
     return function (target) {
-        target.affectedProperties.push('border-color');
-        return target;
+        return $.widget('mage.colorizer', $.mage.colorizer, {
+            _create() {
+                if(this.options.props['border-color'] !== false) {
+                    this.options.props['border-color'] = true;
+                }
+
+                this._super();
+            }
+        });
     }
 });

@@ -1,4 +1,4 @@
-<div id="colorizedDiv" data-mage-init='{"colorizer": "red"}'>This should be red</div>
+<div id="colorizedDiv" data-mage-init='{"colorizer": {"color": "red"}}'>This should be red</div>
 <div class="colorized-divs">This should be green</div>
 <div class="colorized-divs">This should be green</div>
 <div class="colorized-divs">This should be green</div>
@@ -8,19 +8,23 @@
 <script type="text/x-magento-init">
 {
     ".colorized-divs": {
-        "colorizer": "green"
+        "colorizer": {"color": "green"}
     }
 }
 </script>
 <script>
-    require(['jquery', 'colorizer'], function($, colorizer) {
-        $('.colorized-divs-jq').each(function(i, el) {
-            colorizer('purple', el);
-        })
-    })
+   require(['jquery', 'colorizer'], function($) {
+        $('.colorized-divs-jq').colorizer({
+            color: 'purple',
+            props: {
+                'background-color': true,
+                'color': false
+            }
+        });
+   });
 </script>
 <style>
     .colorized-divs, #colorizedDiv, .colorized-divs-jq {
-        border: 1px solid;
+        border: 1px solid black;
     }
 </style>

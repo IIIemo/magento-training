@@ -1,14 +1,26 @@
-define(function() {
+define(['jquery', 'jquery/ui'],
+function($) {
     'use strict';
-    let affectedProperties = [
-        'color'
-    ];
-    let colorizer = function(color, element) {
-        for(let property of affectedProperties) {
-            element.style.setProperty(property, color);
-        }
-    };
-    colorizer.affectedProperties = affectedProperties;
 
-    return colorizer;
-});
+    $.widget('mage.colorizer', {
+        options: {
+            color: 'black',
+            props: {
+                color: true
+            }
+        },
+
+        _create() {
+            let props = this.options.props;
+
+            for(let prop of Object.keys(props)) {
+                if(props[prop]) {
+                    this.element.css(prop, this.options.color);
+                }
+            }
+        }
+    });
+
+    return $.mage.colorizer;
+}
+);
