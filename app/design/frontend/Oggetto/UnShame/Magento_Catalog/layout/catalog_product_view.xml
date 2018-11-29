@@ -55,6 +55,15 @@
                                         </item>
                                     </item>
                                     <item name="template" xsi:type="string">Magento_Catalog/pointless-color-thing</item>
+
+                                    <item name="children" xsi:type="array">
+                                        <item name="pointlessly-colorized-divs-info" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Catalog/js/pointless-color-thing-info</item>
+                                            <item name="config" xsi:type="array"/>
+                                            <item name="displayArea" xsi:type="string">listChildren</item>
+                                            <item name="template" xsi:type="string">Magento_Catalog/pointless-color-thing-info</item>
+                                        </item>
+                                    </item>
                                 </item>
                             </item>
                         </argument>
