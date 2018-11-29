@@ -32,6 +32,7 @@
                 </block>
             </block>
             <block name="product.swag" template="Magento_Catalog::product/useless/swag.phtml"/>
+            <block name="product.colored-text" template="Magento_Catalog::product/useless/colored-text.phtml"/>
         </referenceContainer>
         <move element="product.price.final" destination="page.main.title"/>
     </body>
