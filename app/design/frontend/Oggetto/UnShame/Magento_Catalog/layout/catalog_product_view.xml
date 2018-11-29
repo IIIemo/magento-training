@@ -32,8 +32,33 @@
                 </block>
             </block>
             <block name="product.swag" template="Magento_Catalog::product/useless/swag.phtml"/>
-            <block name="product.colored-text" template="Magento_Catalog::product/useless/colored-text.phtml"/>
-            <block name="product.colored-text-selectable" template="Magento_Catalog::product/useless/colored-text-selectable.phtml"/>
+            <block name="product.colored-text-selectable" template="Magento_Catalog::product/useless/colored-text-selectable.phtml">
+                    <arguments>
+                        <argument name="jsLayout" xsi:type="array">
+                            <item name="components" xsi:type="array">
+                                <item name="pointlessly-colorized-divs" xsi:type="array">
+                                    <item name="component" xsi:type="string">js/pointless-color-thing</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="divs" xsi:type="array">
+                                            <item name="0" xsi:type="array">
+                                                <item name="color" xsi:type="string">red</item>
+                                            </item>
+                                            <item name="1" xsi:type="array">
+                                                <item name="color" xsi:type="string">purple</item>
+                                            </item>
+                                            <item name="2" xsi:type="array">
+                                                <item name="color" xsi:type="string">green</item>
+                                            </item>
+                                            <item name="3" xsi:type="array">
+                                                <item name="color" xsi:type="string">blue</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+            </block>
         </referenceContainer>
         <move element="product.price.final" destination="page.main.title"/>
     </body>
