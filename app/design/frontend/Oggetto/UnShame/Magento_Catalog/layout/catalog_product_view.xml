@@ -37,7 +37,7 @@
                         <argument name="jsLayout" xsi:type="array">
                             <item name="components" xsi:type="array">
                                 <item name="pointlessly-colorized-divs" xsi:type="array">
-                                    <item name="component" xsi:type="string">js/pointless-color-thing</item>
+                                    <item name="component" xsi:type="string">Magento_Catalog/js/pointless-color-thing</item>
                                     <item name="config" xsi:type="array">
                                         <item name="divs" xsi:type="array">
                                             <item name="0" xsi:type="array">
@@ -54,6 +54,7 @@
                                             </item>
                                         </item>
                                     </item>
+                                    <item name="template" xsi:type="string">Magento_Catalog/pointless-color-thing</item>
                                 </item>
                             </item>
                         </argument>
