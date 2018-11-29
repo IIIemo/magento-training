@@ -3,7 +3,7 @@
     "src": "app/design/frontend/Oggetto/UnShame",
     "dest": "pub/static/frontend/Oggetto/UnShame",
     "locale": [
-      "en_US"
+      "ru_RU"
     ],
     "lang": "less",
     "area": "frontend",
@@ -12,7 +12,8 @@
     "default": true,
     "files": [
       "css/styles-m",
-      "css/styles-l"
+      "css/styles-l",
+      "css/critical"
     ]
   }
 }
