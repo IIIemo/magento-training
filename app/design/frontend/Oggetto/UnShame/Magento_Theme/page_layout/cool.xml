@@ -1,4 +1,39 @@
 <layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
     <update handle="1column"/>
     <referenceContainer name="header.panel.wrapper" remove="true"/>
+    <referenceContainer name="content">
+        <block name="input-holder-holder" before="-" template="Magento_Theme::input-holder.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="input-holder" xsi:type="array">
+                                <item name="component" xsi:type="string">Magento_Theme/js/input-holder</item>
+                                <item name="template" xsi:type="string">Magento_Theme/input-holder</item>
+
+                                <item name="children" xsi:type="array">
+                                    <item name="0" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Theme/js/input-holder-input</item>
+                                        <item name="config" xsi:type="array"/>
+                                        <item name="displayArea" xsi:type="string">inputs</item>
+                                        <item name="template" xsi:type="string">Magento_Theme/input-holder-input</item>
+                                    </item>
+                                    <item name="1" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Theme/js/input-holder-input</item>
+                                        <item name="config" xsi:type="array"/>
+                                        <item name="displayArea" xsi:type="string">inputs</item>
+                                        <item name="template" xsi:type="string">Magento_Theme/input-holder-input</item>
+                                    </item>
+                                    <item name="3" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Theme/js/input-holder-input</item>
+                                        <item name="config" xsi:type="array"/>
+                                        <item name="displayArea" xsi:type="string">inputs</item>
+                                        <item name="template" xsi:type="string">Magento_Theme/input-holder-input</item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+        </block>
+    </referenceContainer>
 </layout>

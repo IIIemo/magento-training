@@ -1,0 +1,5 @@
+<!-- There has to be a better way of getting length of current iterable than accessing it again, right?? -->
+
+<!-- ko foreach: getRegion('inputs') -->
+    <!-- ko template: getTemplate() --><!-- /ko --><!-- ko if: ($index() !== $parent.getRegion('inputs')().length - 1) -->,<!-- /ko -->
+<!-- /ko -->
