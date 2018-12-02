@@ -1,7 +1,8 @@
 var config = {
     map: {
         '*': {
-            'colorizer': 'js/colorizer'
+            'colorizer': 'js/colorizer',
+            'tracker': 'Magento_Theme/js/tracker'
         }
     },
     config: {
