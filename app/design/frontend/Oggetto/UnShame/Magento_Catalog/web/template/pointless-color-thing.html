@@ -1,5 +1,5 @@
 <!-- ko foreach: {data: divs, as: 'div'} -->
-<a href="" data-bind="text: 'This should be ' + div.color, click: $parent.colorize.bind($parent), style: {color: div.color}"></a><br>
+<a href="" data-bind="text: $t('This should be') + ' ' + $t(div.color), click: $parent.colorize.bind($parent), style: {color: div.color}"></a><br>
 <!-- /ko -->
 <!-- ko foreach: getRegion('listChildren') -->
     <!-- ko template: getTemplate() --><!-- /ko -->

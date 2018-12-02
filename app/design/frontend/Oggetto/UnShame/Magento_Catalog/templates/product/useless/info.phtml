@@ -4,6 +4,7 @@ $info = $block->getInfo();
 if(!$info) {
     $info = $block->getVar("useless_info_fallback", "Magento_Catalog");
 }
+$info = __($info);
 
 $tag = $block->getTag();
 

@@ -1,17 +1,19 @@
 define([
     'jquery',
     'mage/url',
+    'mage/translate',
     'Magento_Ui/js/modal/modal'
 ], function (
     $,
-    url
+    url,
+    $t
 ) {
     'use strict';
 
     var mixin = {
         enableAddToCartButton: function () {
             this._super.apply(this, arguments);
-            $('<strong>You have added something to the cart! Congrats!</strong>').modal().modal('openModal');
+            $('<strong>' + $t('You have added something to the cart! Congrats!') + '</strong>').modal().modal('openModal');
         }
     };
 

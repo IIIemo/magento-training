@@ -1,9 +1,11 @@
 define([
     'ko',
-    'uiComponent'
+    'uiComponent',
+    'mage/translate'
 ], function(
     ko,
-    Component
+    Component,
+    $t
 ) {
     'use strict';
 
@@ -13,7 +15,9 @@ define([
                 email: '${ $.parentName }:email' // oh god why
             }
         },
-        localizedMessage: 'An email confirming your order will be sent to',
-        email: ko.observable()
+        email: ko.observable(),
+        getLocalizedMessage: function() {
+            return $t('An email confirming your order will be sent to');
+        }
     });
 });
